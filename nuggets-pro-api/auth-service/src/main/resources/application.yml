@@ -1,0 +1,18 @@
+server:
+  port: 8882
+spring:
+  application:
+    name: nuggets-auth-service
+
+  cloud:
+    nacos:
+      discovery:
+        username: nacos
+        password: nacos
+        server-addr: 127.0.0.1:8848
+        namespace: public
+      config:
+        username: nacos
+        password: nacos
+        context-path: /nacos
+        server-addr: 127.0.0.1:8848

@@ -78,7 +78,7 @@ import loginPassword from '../assets/images/login-password.svg'
 import {
     login,
     SendCode
-} from '../api/login.js'
+} from '@/api/login'
 export default {
     components: {
 
@@ -139,6 +139,7 @@ export default {
     methods: {
         showLogin() {
             this.loginVisible = true
+            this.login().then()
         },
         imgChange() {
             this.url = loginLogo
@@ -150,6 +151,7 @@ export default {
             this.url = loginPassword
         },
         login() {
+            console.log(process.env.VUE_APP_BASE_API_URL)
             login(this.loginForm).then(resp => {
                 console.log(resp)
             })

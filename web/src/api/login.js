@@ -1,8 +1,9 @@
-import axios  from "axios"
+import request from '@/utils/http'
 
-export function login(input){ 
-    return axios.post('Login/GetToken')
-}
-export function SendCode(eamil){
-    return axios.post('Login/SendEmailCode',{eamil:eamil})
+export function login(params){ 
+    return request({
+        url:'/hello',
+        method:'get',
+        params:params
+      })
 }
