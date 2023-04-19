@@ -18,20 +18,11 @@ spring:
         server-addr: 127.0.0.1:8848
     # 配置跨域
     gateway:
-#      globalcors:
-#        cors-configurations:
-#          '[/**]': # 匹配所有请求
-#            allowedOrigins: "*" # 跨域处理 允许所有的域
-#            allowedMethods: # 支持的方法
-#              - GET
-#              - POST
-#              - PUT
-#              - DELETE
       routes:
         - id: xxx
-          uri: lb://xxx
+          uri: lb://nuggets-auth-service
           predicates:
-            - Path=/xxx/**
+            - Path=/api/user/**
           filters:
             - StripPrefix= 1
   config:

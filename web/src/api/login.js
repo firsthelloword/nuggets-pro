@@ -2,8 +2,8 @@ import request from '@/utils/http'
 
 export function login(params){ 
     return request({
-        url:'/hello',
+        url:'/user/hello',
         method:'get',
-        params:params
+        // params:params
       })
 }
