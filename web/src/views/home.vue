@@ -15,8 +15,6 @@
                     <el-menu-item index="9-1">青训营社区</el-menu-item>
                 </el-sub-menu>
                 <el-menu-item index="10">商城</el-menu-item>
-                <el-menu-item index="11">APP</el-menu-item>
-                <el-menu-item index="12">插件</el-menu-item>
                 <div class="menu-search">
                     <el-input v-model="input3" placeholder="搜索稀土掘金">
                         <template #append>

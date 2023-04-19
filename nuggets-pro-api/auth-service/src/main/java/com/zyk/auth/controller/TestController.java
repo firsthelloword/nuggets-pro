@@ -3,6 +3,8 @@ package com.zyk.auth.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.sql.SQLException;
+
 /**
  * @author zhangyongkai
  * @date 2023/4/16 18:45
@@ -12,7 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @RequestMapping("hello")
-    public String hello(){
-        return "user";
+    public String hello() throws SQLException {
+
+        throw new SQLException();
+
+
     }
 }

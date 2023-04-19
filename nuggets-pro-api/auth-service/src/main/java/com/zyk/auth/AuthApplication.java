@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author zhangyongkai
  * @date 2023/4/16 18:51
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.zyk")
 public class AuthApplication {
 
     public static void main(String[] args) {

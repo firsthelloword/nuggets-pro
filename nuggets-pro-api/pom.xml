@@ -20,6 +20,8 @@
         <module>search</module>
         <module>video-service</module>
         <module>auth-service</module>
+        <module>system-admin</module>
+        <module>system-admin</module>
     </modules>
 
     <parent>
