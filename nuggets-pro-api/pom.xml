@@ -13,15 +13,13 @@
 
     <modules>
         <module>common</module>
-        <module>boiling-service</module>
-        <module>course-service</module>
+        <module>admin</module>
         <module>gateway</module>
         <module>monitor</module>
         <module>search</module>
-        <module>video-service</module>
-        <module>auth-service</module>
-        <module>system-admin</module>
-        <module>system-admin</module>
+        <module>video</module>
+        <module>auth</module>
+        <module>system</module>
     </modules>
 
     <parent>

@@ -1,9 +1,9 @@
 import request from '@/utils/http'
 
-export function login(params){ 
+export function login(data){ 
     return request({
-        url:'/user/hello',
-        method:'get',
-        // params:params
+        url:'/user/login',
+        method:'post',
+        data:data
       })
 }
