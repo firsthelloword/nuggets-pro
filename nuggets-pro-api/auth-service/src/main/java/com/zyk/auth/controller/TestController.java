@@ -16,7 +16,7 @@ public class TestController {
     @RequestMapping("hello")
     public String hello() throws SQLException {
 
-        System.out.println("我是dev分支1");
+        System.out.println("我是dev分支");
         throw new SQLException();
 
 
