@@ -7,8 +7,8 @@
         </el-header>
         <el-container>
             <el-main>
-                <el-row>
-                    <el-col :span="15">
+                <el-row :gutter="1">
+                    <el-col :span="14">
                         <el-card  class="box-card" shadow="never">
                             <el-row>
                                 <el-tabs v-model="activeName" @tab-click="handleClick">
@@ -36,8 +36,6 @@
                         <author-view></author-view>
                     </el-col>
                 </el-row>
-                 <span :v-html="hello">
-                </span>
             </el-main>
            
         </el-container>

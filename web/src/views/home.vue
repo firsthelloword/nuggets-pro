@@ -137,7 +137,10 @@ export default {
     methods: {
         showLogin() {
             this.loginVisible = true
-            this.login().then()
+            this.login({
+                password: "",
+                username: ""
+            }).then()
         },
         imgChange() {
             this.url = loginLogo

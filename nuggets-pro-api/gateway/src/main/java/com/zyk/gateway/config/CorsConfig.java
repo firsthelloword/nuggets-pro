@@ -2,6 +2,7 @@ package com.zyk.gateway.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.reactive.CorsWebFilter;
 import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
@@ -12,7 +13,7 @@ import org.springframework.web.util.pattern.PathPatternParser;
  * @author zhangyongkai
  * @date 2023/4/17 23:19
  */
-@Configuration
+@EnableWebSecurity
 public class CorsConfig {
     @Bean
     public CorsWebFilter corsFilter() {
