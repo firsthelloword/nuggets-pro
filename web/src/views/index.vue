@@ -1,15 +1,18 @@
+<!-- 首页 -->
 <template>
-<div class="index-container">
-    <el-container>
-        <!-- 菜单 -->
-        <el-header>
-            <menu-view></menu-view>
-        </el-header>
+    <div class="index-container">
         <el-container>
-            <el-main>
-                <el-row :gutter="1">
-                    <el-col :span="14">
-                        <el-card  class="box-card" shadow="never">
+            <!-- 菜单 -->
+            <!-- <el-header>
+                <menu-view></menu-view>
+            </el-header> -->
+            <el-main class="main-contain">
+                <el-row>
+                    <el-col :offset="2" :span="3" class="left-contain">
+                        <left-menu></left-menu>
+                    </el-col>
+                    <el-col :span="12">
+                        <el-card class="box-main" shadow="never">
                             <el-row>
                                 <el-tabs v-model="activeName" @tab-click="handleClick">
                                     <el-button class="card-btn" type="text">推荐</el-button>
@@ -31,17 +34,15 @@
                             </div>
                         </el-card>
                     </el-col>
-                    <el-col class="sign-box" :span="8">
+                    <el-col class="sign-box hidden-md-and-down" :span="5">
                         <sign-view></sign-view>
                         <author-view></author-view>
                     </el-col>
                 </el-row>
             </el-main>
-           
         </el-container>
-    </el-container>
 
-</div>
+    </div>
 </template>
 
 <script>
@@ -49,19 +50,21 @@ import MenuView from '../components/base/MenuView.vue'
 import IndexView from '../components/base/IndexView.vue'
 import SignView from '../components/base/SignView.vue'
 import AuthorView from '../components/base/AuthorView.vue'
-
+import LeftMenu from '@/components/base/LeftMenu.vue'
+import 'element-plus/theme-chalk/display.css'
 export default {
     components: {
         AuthorView,
         MenuView,
         IndexView,
-        SignView
+        SignView,
+        LeftMenu
     },
     data() {
         return {
             activeName: "推荐",
             date: "3天内",
-            hello:"<span style='color:red'>张</span>"
+            hello: "<span style='color:red'>张</span>"
         }
     },
     methods: {
@@ -73,6 +76,15 @@ export default {
 </script>
 
 <style scoped>
+.main-contain{
+    margin-top: 20px;
+}
+.left-contain{
+    min-width: 150px;
+    width: 100%;
+    margin-right: 20px;
+}
+
 .card-btn {
     margin: -10px 10px 0 10px;
     color: #71777c;
@@ -96,10 +108,11 @@ export default {
     --el-header-height: 45px;
 }
 
-.box-card {
-    width: 680px;
-    margin-left: 250px;
+.box-main {
+    min-width: 600px;
+    width: 100%;
     height: 90%;
+    margin: 0;
     padding: 0 !important;
 }
 

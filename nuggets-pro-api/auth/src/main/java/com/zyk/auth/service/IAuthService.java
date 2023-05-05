@@ -15,4 +15,6 @@ public interface IAuthService {
      */
     public String getToken(SysUser sysUser);
 
+    public String refreshToken(String token);
+
 }

@@ -9,9 +9,14 @@
 html,
 body {
     height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 .el-container {
     height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
 .el-tabs__item {
@@ -32,14 +37,19 @@ body {
 }
 .el-aside,
 .el-main {
+    padding: 0 !important;
     height: 100%;
     background-color: #f4f5f5;
-}
-.el-card__body{
-    padding: 10px !important;
 }
 .hover-change:hover{
     cursor: pointer;
     background-color: #fafafa !important;
+}
+
+.el-menu{
+    user-select: none;
+}
+.el-header{
+    padding: 0 !important;
 }
 </style>

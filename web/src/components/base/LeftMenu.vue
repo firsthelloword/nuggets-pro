@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-card class="box-card" shadow="never">
+    <el-card :body-style="{ padding: '0px' }" shadow="never">
                 <el-menu @select="menuSelect" default-active="3"  @open="handleOpen" @close="handleClose">
                     <el-menu-item index="0">
                         <icon-base :iconColor="color[0]" class="icon-box" icon-name="write">
@@ -83,11 +83,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .box-card {
-    width: 200px;
-    margin: 20px 0 0 150px !important;
+    padding: 0 ;
 }
 .icon-box {
     margin: 0 10px 0 -10px;
