@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from '../views/home.vue'
-import Index from '../views/index.vue'
-import HeatPoint from '../views/heatPoint.vue'
-import Lesson from '../views/lesson.vue'
+import Home from '../views/Home.vue'
+import Index from '../views/Index.vue'
+import HeatPoint from '../views/HeatPoint.vue'
+import Lesson from '../views/Lesson.vue'
 const routes = [
   { path: '/', component: Home,
   children: [

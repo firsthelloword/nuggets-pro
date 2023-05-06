@@ -3,21 +3,11 @@
 <div>
     <el-card shadow="never">
         <el-row>
-            <el-col :span="2">
-                <div class="avatar-box">
-                    <el-avatar :size="50" :src="circleUrl" />
-                </div>
-            </el-col>
-            <el-col :span="8">
-                <el-row class="name-box">
-                    <el-col :span="4"><span>Name</span></el-col>
-                </el-row>
-                <el-row class="position-box">
-                    <el-col :span="16"><span>首席工程师 · 14分钟前</span></el-col>
-                </el-row>
-                <el-row class="content-box">
-                    <el-col><span>vue 真是太好玩了</span></el-col>
-                </el-row>
+            <el-col :span="24">
+                <el-avatar :size="50" :src="circleUrl"  class="avatar-box"/>
+                <span>Name</span>
+                <span>首席工程师 · 14分钟前</span>
+                <span>vue 真是太好玩了</span>
             </el-col>
         </el-row>
         <el-divider style="margin:20px 0 10px 0" />
@@ -69,7 +59,7 @@ export default {
 
 <style scoped>
 .avatar-box {
-    margin: 10px 0 0 10px;
+    margin: 10px 10px 0 10px;
 }
 
 .name-box {

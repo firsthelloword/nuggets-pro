@@ -15,7 +15,7 @@
                     <el-menu-item index="9-1">青训营社区</el-menu-item>
                 </el-sub-menu>
                 <el-menu-item index="10">商城</el-menu-item>
-                <div class="menu-search">
+                <div class="menu-search hidden-md-and-down">
                     <el-input v-model="input3" placeholder="搜索稀土掘金">
                         <template #append>
                             <el-icon>
@@ -25,7 +25,7 @@
                     </el-input>
                 </div>
 
-                <el-dropdown split-button type="primary" class="menu-dropdown">
+                <el-dropdown split-button type="primary" class="menu-dropdown hidden-sm-and-down">
                     创作者中心
                     <template #dropdown>
                         <el-dropdown-menu>
@@ -35,7 +35,7 @@
                     </template>
                 </el-dropdown>
 
-                <el-button class="menu-button" @click="showLogin">登录</el-button>
+                <el-button  class="menu-button" @click="showLogin">登录</el-button>
                 <login :v-if="loginVisible"></login>
             </el-menu>
         </el-header>
@@ -73,6 +73,7 @@
 import loginLogo from '../assets/images/login-logo.svg'
 import loginAccount from '../assets/images/login-account.svg'
 import loginPassword from '../assets/images/login-password.svg'
+import 'element-plus/theme-chalk/display.css'
 import {
     login,
     SendCode
